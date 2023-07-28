@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1>我的 Web 页面</h1>
+<p id="demo">一个段落</p>
+<button type="button" onclick="myFunction()">尝试一下</button>
+<script>
+function myFunction()
+{
+    document.getElementById("demo").innerHTML="我的第一个 JavaScript 函数";
+}
+
+
+
+
+function countDown(time) {
+	
+	var nowTime = +new Date();
+	var inputTime = +new Date(time);
+	var times = (inputTime - nowTime) / 1000;
+
+	var d = parseInt(times/60/60/24);
+	d = d<10 ? '0' + d : d;
+	var h = parseInt(times/60/60%24);
+	h = h < 10 ? '0' + h : h;
+	var m = parseInt(times/60/60%24);
+	m = m < 10 ? '0' + m : m;
+	var s = parseInt(times/60/60%24);
+	s = s < 10 ? '0' + s : s;
+
+	return d + '天' + h + '时' +  m + '分' + s +'秒';
+}
+
+console.log(countDown('2023-9-2 9:00:02'));
+</script>
+
+</body>
+</html>
+
